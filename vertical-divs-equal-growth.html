@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Flex Widget</title>
+
+<style>
+body {
+   font-family: Verdana, Arial, Helvetica, sans-serif;
+   font-size: 15px; 
+}
+
+.flex-container {
+    display: flex;
+    background-color: #4caf50;
+}
+
+.flex-container .flex_child {
+    display: flex;
+    flex-direction: column; 
+    background-color: #f1f1f1;
+    margin: 10px;
+    padding:20px;
+    width: 50%;
+    border: 3px solid #5f5f5f;
+}
+
+
+.flex-container .flex_child .child1{
+    flex: 10 auto;
+    border: 3px solid #5f5f5f;
+    padding: 10px;
+}
+
+
+.flex-container .flex_child .child2{
+   flex: 40px auto;
+   border: 3px solid #5f5f5f;
+   margin-top: 30px;
+}
+
+</style>
+
+
+</head>
+<body>
+  
+  
+
+<div class="flex-container">
+  <div class="flex_child">
+     <div class="child1">
+        <h2>The secret behind sibiling divs growing eveningly.</h2>
+        <p>In the days when we use to only have Table structures, we had no issues with taking two cells in a row and having them growing eveningly together. When we started to use more css for design and started to frown upon tables for any structure design problem, in came the dilemma of how to have two sibling divs growing eveningly.</p>
+
+        <p>In the world of floating DIVs this was a task to get this to happen. Many times we resorted back to table when we needed this type of structure.</p>
+
+        <p>Luckly today in the world of flex we are able to create a parent that holds children that can be given the same rule and those containers can have children that will adhere to the changes registered by the parents. </p>
+
+        <p>Notice how no matter how much content is put into this container, your sibling "Child 1 Right" also grows or shrinks adhereing to it sibling on the left.</p>
+
+        <p>It also forces  "Child 2 Left" and "Child 2 Right" to eveningly move down accordingly.</p>
+
+        <p>This is an example of this structure.</p>
+
+
+     </div>
+     <div class="child2">Child 2 Left </div>  
+  </div>
+  <div class="flex_child">
+       <div class="child1">Child 1 Right</div>
+       <div class="child2">Child 2 Left</div>  
+  </div>
+
+</div>
+    
+    
+  </div>  
+
+</body>
+</html>
